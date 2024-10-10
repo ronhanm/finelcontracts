@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "eth_cketh_bridge_backend": {
+      "declarations": {
+        "node_compatibility": true
+      },
+      "main": "src/eth_cketh_bridge_backend/main.mo",
+      "type": "motoko"
+    },
+    "eth_cketh_bridge_frontend": {
+      "dependencies": [
+        "eth_cketh_bridge_backend"
+      ],
+      "source": [
+        "src/eth_cketh_bridge_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "eth_cketh_bridge_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
